@@ -8,6 +8,6 @@ before_script:
   - composer self-update
   - composer install
   - mysql -e 'create database blog;'
-  - mysql -e blog < tests/testdatabasesetup.sql
+  - mysql -u root blog < tests/testdatabasesetup.sql
 
 script: vendor/bin/phpunit
